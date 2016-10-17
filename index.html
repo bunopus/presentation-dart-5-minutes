@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Dart: 5 minutes</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/tomorrow.css">
+
+		<link rel="stylesheet" href="css/custom.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section><h1>Dart: 5 minutes of <p class="fragment strike">hate</p></h1></section>
+				<section data-background="img/bugurt.png" data-background-size="contain"></section>
+				<section><h1>Dart: 5 minutes of confusion</h1></section>
+				<section data-background="img/1984_2minutes_confusion.png"></section>
+
+				<section>
+					<section><h1 style="font-size: 2em">5. Transformers</h1></section>
+					<section><img src="img/transformers.gif" class="plain illustration"></section>
+					<section><img src="img/dart-transformers.png" class="plain illustration"></section>
+					<section>
+						<h2>Transformers are</h2>
+						<h2>
+							<ul>
+								<li class="fragment">Slow</li>
+								<li class="fragment">...</li>
+								<li class="fragment">Very slow</li>
+							</ul>
+						</h2>
+					</section>
+					<section>
+						<h2 style="color: red">Use code generation instead!</h2>
+					</section>
+					<section data-background="img/shrug.gif"></section>
+				</section>
+
+				<section>
+					<section><h1 style="font-size: 2.3em">4. JS World</h1></section>
+					<section class="stretch"><img class="plain illustration" src="img/tools.png"></section>
+					<section class="stretch">
+					<pre><code class="java" data-trim contenteditable style="font-size: 1.3em;height:800px; line-height: 1em">
+// Dart
+void main() {
+  printOptions(new Options(responsive: true));
+}
+
+@JS()
+external printOptions(Options options);
+
+@JS()
+@anonymous
+class Options {
+  external bool get responsive;
+
+  external factory Options({bool responsive});
+}</code></pre>
+					</section>
+					<section>
+						<h2 style="font-size: 5em">111</h2>
+						<img src="img/bug.png" class="plain" style="width: 100px">
+					</section>
+
+				</section>
+
+				<section>
+					<section><h1 style="font-size: 2.6em">3. Ecosystem</h1></section>
+					<section>
+						<h3>Amount of libraries</h3>
+						<img src="img/dart-js-libs.png" class="plain" style="size: 1200px">
+					</section>
+					<section class="stretch">
+					<pre><code class="java" data-trim contenteditable style="font-size: 2em;height:500px; line-height: 2em">
+// Dart
+"Dart is awesome!".padLeft(4);
+</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section><h1 style="font-size: 2.9em">2. Hype</h1></section>
+					<section><h3><a href="https://github.com/search/advanced" data-preview-link>Github</a></h3></section>
+					<section class="stretch">
+						<h3>Dart vs JavaScript</h3>
+						<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/760_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0h52xr1","geo":"","time":"today 5-y"},{"keyword":"/m/02p97","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"q=%2Fm%2F0h52xr1,%2Fm%2F02p97"}); </script>
+					</section>
+					<section class="stretch">
+						<h3>Dart</h3>
+						<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/760_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0h52xr1","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"q=%2Fm%2F0h52xr1"}); </script>
+					</section>
+				</section>
+
+				<section>
+					<section><h1 style="font-size: 3.2em">1. Transparency</h1></section>
+					<section><img src="img/roadmap.jpg" style="width: 1500px" class="plain"></section>
+					<section><h3><a href="https://github.com/google/built_value.dart/blob/master/libraries_for_object_oriented_dart.md" data-preview-link>Built</a></h3></section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'zoom',
+				transitionSpeed: 'fast',
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				if(event.indexh == 7){
+					if(event.indexv == 2){}
+				}
+			} );
+		</script>
+	</body>
+</html>
