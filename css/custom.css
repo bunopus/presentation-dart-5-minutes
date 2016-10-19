@@ -1,3 +1,7 @@
+h1 {
+    text-shadow: none !important;
+}
+
 .plain {
     background: none !important;
     margin: 0 !important;

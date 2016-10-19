@@ -26,76 +26,119 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section><h1>Dart: 5 minutes of <p class="fragment strike">hate</p></h1></section>
-				<section data-background="img/bugurt.png" data-background-size="contain"></section>
-				<section><h1>Dart: 5 minutes of confusion</h1></section>
-				<section data-background="img/1984_2minutes_confusion.png"></section>
-
 				<section>
-					<section><h1 style="font-size: 2em">5. Transformers</h1></section>
-					<section><img src="img/transformers.gif" class="plain illustration"></section>
-					<section><img src="img/dart-transformers.png" class="plain illustration"></section>
 					<section>
-						<h2>Transformers are</h2>
-						<h2>
-							<ul>
-								<li class="fragment">Slow</li>
-								<li class="fragment">...</li>
-								<li class="fragment">Very slow</li>
-							</ul>
-						</h2>
+						<div>
+							<div style="font-size: 1.2em"><h2>Evgeny Gusev</h2></div><br>
+							<img src="img/wrike_logo.png" class="plain" style="width: 250px">
+						</div>
 					</section>
 					<section>
-						<h2 style="color: red">Use code generation instead!</h2>
+						<div style="text-align: center">
+							<h2 style="font-size: 250px; margin: 0; line-height: 200px">40+</h2>
+							<span style="padding-right: 50px">dart developers</span>
+						</div>
 					</section>
-					<section data-background="img/shrug.gif"></section>
+
+					<section>
+						<div style="text-align: center">
+							<h2 style="font-size: 250px; margin: 0; line-height: 200px">2+</h2>
+							<span>years of Dart on Prod</span>
+						</div>
+					</section>
+
+					<section>
+						<div style="text-align: center">
+							<h2 style="font-size: 250px; margin: 0; line-height: 200px">500 000</h2>
+							<span>Lines of Dart code</span>
+						</div>
+					</section>
 				</section>
 
+				<section><section><h1>Dart: 5 minutes of <p class="fragment strike">hate</p></h1></section>
+					<section>
+						<h1>Dart: 5 minutes of</h1><br>
+						<h2 style="font-weight: 700">¯\_(ツ)_/¯</h2>
+					</section>
+				</section>
+
+
 				<section>
-					<section><h1 style="font-size: 2.3em">4. JS World</h1></section>
+					<section><h1 style="font-size: 3em">4. JS World</h1></section>
 					<section class="stretch"><img class="plain illustration" src="img/tools.png"></section>
-					<section class="stretch">
-					<pre><code class="java" data-trim contenteditable style="font-size: 1.3em;height:800px; line-height: 1em">
-// Dart
-void main() {
-  printOptions(new Options(responsive: true));
-}
-
-@JS()
-external printOptions(Options options);
-
-@JS()
-@anonymous
-class Options {
-  external bool get responsive;
-
-  external factory Options({bool responsive});
-}</code></pre>
-					</section>
-					<section>
-						<h2 style="font-size: 5em">111</h2>
-						<img src="img/bug.png" class="plain" style="width: 100px">
-					</section>
+					<section data-background="img/shrug_1.gif"></section>
 
 				</section>
 
 				<section>
-					<section><h1 style="font-size: 2.6em">3. Ecosystem</h1></section>
+					<section><h1 style="font-size: 4em">3. Ecosystem</h1></section>
 					<section>
 						<h3>Amount of libraries</h3>
-						<img src="img/dart-js-libs.png" class="plain" style="size: 1200px">
+						<canvas data-chart="bar" style="width: 950px; max-width: 950px">
+						<!--
+						{
+						  "data": {
+							"labels": [
+							  "Dart",
+							  "JS"
+							],
+							"datasets": [
+							  {
+								"data": [
+								  1000,
+								  10000
+								],
+								"backgroundColor": [
+								  "#3e76d1",
+								  "#d16947"
+								]
+							  }
+							]
+						  },
+						  "options": {
+							"legend": {
+							  "display": false,
+							  "labels": {
+								"fontSize": 30
+							  }
+							},
+							"animation": false,
+							"scales": {
+							  "xAxes": [
+								{
+								  "gridLines": {
+									"display": false,
+									"zeroLineWidth": 0
+								  }
+								}
+							  ],
+							  "yAxes": [
+								{
+								  "display": false,
+								  "ticks": {
+									"beginAtZero": true
+								  }
+								}
+							  ]
+							}
+						  }
+						}
+						-->
+						</canvas>
 					</section>
+					<section data-background="img/shrug.gif"></section>
 					<section class="stretch">
-					<pre><code class="java" data-trim contenteditable style="font-size: 2em;height:500px; line-height: 2em">
+					<pre><code class="java" data-trim contenteditable style="font-size: 2.2em;height:500px; line-height: 2em; padding-left: 20px">
 // Dart
 "Dart is awesome!".padLeft(4);
 </code></pre>
 					</section>
+					<section data-background="img/ok_or_not.gif" data-background-size="contain"></section>
+
 				</section>
 
 				<section>
-					<section><h1 style="font-size: 2.9em">2. Hype</h1></section>
-					<section><h3><a href="https://github.com/search/advanced" data-preview-link>Github</a></h3></section>
+					<section><h1 style="font-size: 5em">2. Hype</h1></section>
 					<section class="stretch">
 						<h3>Dart vs JavaScript</h3>
 						<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/760_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0h52xr1","geo":"","time":"today 5-y"},{"keyword":"/m/02p97","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"q=%2Fm%2F0h52xr1,%2Fm%2F02p97"}); </script>
@@ -107,9 +150,26 @@ class Options {
 				</section>
 
 				<section>
-					<section><h1 style="font-size: 3.2em">1. Transparency</h1></section>
-					<section><img src="img/roadmap.jpg" style="width: 1500px" class="plain"></section>
-					<section><h3><a href="https://github.com/google/built_value.dart/blob/master/libraries_for_object_oriented_dart.md" data-preview-link>Built</a></h3></section>
+					<section><h1 style="font-size: 6em">Transparency</h1></section>
+					<section><h1>50</h1><img class="plain" src="img/angular_dart.png"></section>
+					<section><h1>8052</h1><img class="plain" src="img/angular_angular.png"></section>
+					<section data-background="img/ultra_shrug.gif"></section>
+				</section>
+				<section>
+					<h1>Thank you</h1>
+					<h2 style="font-weight: 200">¯\_(ツ)_/¯</h2>
+					<style>
+						img.small-logo {
+							width: 30px;
+							padding-right: 5px;
+						}
+					</style>
+					<p style="font-size: 20px; padding-top: 50px">
+						<img src="img/twitter.png" style="width: 20px" class="plain"><a href="https://twitter.com/bunopus">@bunopus</a><br><br>
+						<img src="img/vk-social.png" class="plain block small-logo"/>
+						<img src="img/facebook-social.png" class="plain block small-logo"/>
+						<img src="img/habr-social.png" class="plain block small-logo"/> : <a href="https://www.wrike.com/">@wriketeam</a><br>
+					</p>
 				</section>
 			</div>
 		</div>
@@ -123,19 +183,25 @@ class Options {
 				history: true,
 				transition: 'zoom',
 				transitionSpeed: 'fast',
+				chart: {
+					defaults: {
+						global: {
+							legend: {
+								display: false
+							}
+						}
+					}
+				},
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'bower_components/chart.js/dist/Chart.min.js' 	},
+					{ src: 'plugin/chart/csv2chart.js' }
 				]
 			});
-			Reveal.addEventListener( 'slidechanged', function( event ) {
-				if(event.indexh == 7){
-					if(event.indexv == 2){}
-				}
-			} );
 		</script>
 	</body>
 </html>
