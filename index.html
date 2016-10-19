@@ -74,58 +74,8 @@
 					<section><h1 style="font-size: 4em">3. Ecosystem</h1></section>
 					<section>
 						<h3>Amount of libraries</h3>
-						<canvas data-chart="bar" style="width: 950px; max-width: 950px">
-						<!--
-						{
-						  "data": {
-							"labels": [
-							  "Dart",
-							  "JS"
-							],
-							"datasets": [
-							  {
-								"data": [
-								  1000,
-								  10000
-								],
-								"backgroundColor": [
-								  "#3e76d1",
-								  "#d16947"
-								]
-							  }
-							]
-						  },
-						  "options": {
-							"legend": {
-							  "display": false,
-							  "labels": {
-								"fontSize": 30
-							  }
-							},
-							"animation": false,
-							"scales": {
-							  "xAxes": [
-								{
-								  "gridLines": {
-									"display": false,
-									"zeroLineWidth": 0
-								  }
-								}
-							  ],
-							  "yAxes": [
-								{
-								  "display": false,
-								  "ticks": {
-									"beginAtZero": true
-								  }
-								}
-							  ]
-							}
-						  }
-						}
-						-->
-						</canvas>
-					</section>
+                        <iframe id="dart-vs-js" style="width:900px; height:900px;" data-chart></iframe>
+                    </section>
 					<section data-background="img/shrug.gif"></section>
 					<section class="stretch">
 					<pre><code class="java" data-trim contenteditable style="font-size: 2.2em;height:500px; line-height: 2em; padding-left: 20px">
@@ -183,23 +133,35 @@
 				history: true,
 				transition: 'zoom',
 				transitionSpeed: 'fast',
-				chart: {
-					defaults: {
-						global: {
-							legend: {
-								display: false
-							}
-						}
-					}
-				},
+                chart : {
+                    pointLabelFontSize: 50,
+                    items : [
+                        {
+                            selector : "#dart-vs-js",
+                            type : "bar",
+                            data : {
+                                labels: ["Dart", "JS"],
+                                datasets: [
+                                    {
+                                        data: [1000, 10000]
+                                    }
+                                ]
+                            },
+                            options : {
+                                responsive : true,
+                                scaleShowLabels : false,
+                            }
+                        }
+                    ]
+                },
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'bower_components/chart.js/dist/Chart.min.js' 	},
-					{ src: 'plugin/chart/csv2chart.js' }
+                    { src: 'plugin/chartjs/Chart.min.js'},
+                    { src: 'plugin/chartjs/charted.js'} // This is the plugin
 				]
 			});
 		</script>
